@@ -1,8 +1,14 @@
+interface Rating {
+  rate: number;
+  count: number;
+}
+
 interface IProps {
   image: string;
   title: string;
   price: number;
   description: string;
+  rating: Rating;
 }
 
 const Product = (props: IProps) => {
