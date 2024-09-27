@@ -10,3 +10,7 @@ export const calculateTotalOfProducts = (products: Product[]) => {
     })
     return total.toFixed(2);
 }
+
+export const reverseUppercaseString = (inputString: string) => {
+    return inputString.split('').reverse().join('').toUpperCase();
+}

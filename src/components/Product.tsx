@@ -21,7 +21,7 @@ const Product = (props: IProps) => {
   const dispatch = useAppDispatch();
 
   const handleAddProduct = () => {
-    dispatch(addToCart(product));
+    dispatch(() => addToCart(product));
   };
 
   return (

@@ -32,7 +32,7 @@ export const productSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            state.cart = [...state.cart, action.payload]
+            state.cart = [...state.cart, action.payload];
         }
 
     },
