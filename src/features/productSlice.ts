@@ -18,7 +18,7 @@ export interface Product {
 
 const initialState = {
     products: [] as Product[],
-    cart: [],
+    cart: [] as Product[],
 };
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
@@ -31,6 +31,9 @@ export const productSlice = createSlice({
     name: "products",
     initialState,
     reducers: {
+        addToCart: (state, action) => {
+            state.cart = [...state.cart, action.payload]
+        }
 
     },
     extraReducers(builder) {
@@ -42,4 +45,5 @@ export const productSlice = createSlice({
     },
 });
 
+export const { addToCart } = productSlice.actions;
 export default productSlice.reducer;
