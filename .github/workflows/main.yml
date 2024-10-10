@@ -1,0 +1,19 @@
+name: CI/CD
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo "Testing gh actions 10.10.24"
+
+      #- name: Simulate an error
+      #  run: echo "About to fail" ; exit 1
+
+      - name: Another greeting
+        run: echo "This is another message"
